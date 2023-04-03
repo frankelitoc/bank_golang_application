@@ -6,7 +6,8 @@ spec:
   selector:
     app: simple-bank-api
   ports:
-    - protocol: TCP
+    - name: bank-api-port
+      protocol: TCP
       port: 80
       targetPort: 8080
     - name: redis-port
