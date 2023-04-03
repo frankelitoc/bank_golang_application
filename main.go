@@ -71,6 +71,7 @@ func runDBMigration(migrationURL string, dbSource string) {
 	log.Info().Msg("db migrated successfully")
 }
 
+
 func runTaskProcessor(config util.Config, redisOpt asynq.RedisClientOpt, store db.Store) {
 	mailer := mail.NewGmailSender(config.EmailSenderName, config.EmailSenderAddress, config.EmailSenderPassword)
 	taskProcessor := worker.NewRedisTaskProcessor(redisOpt, store, mailer)
