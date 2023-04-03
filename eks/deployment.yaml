@@ -15,6 +15,10 @@ spec:
         app: simple-bank-api
     spec:
       containers:
+      - name: redis-server
+        image: redis:latest
+        ports:
+        - containerPort: 6379
       - name: simple-bank-api
         image: 320964430417.dkr.ecr.us-east-1.amazonaws.com/simplebankfrankely:latest
         imagePullPolicy: Always
