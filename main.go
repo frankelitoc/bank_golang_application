@@ -41,7 +41,7 @@ func main() {
 
 	conn, err := sql.Open(config.DBDriver, config.DBSource)
 	if err != nil {
-		log.Fatal().Err(err).Msg("cannot connect to db")
+		log.Fatal().Err(err).Msg("cannot connect to database is it up?")
 	}
 
 	runDBMigration(config.MigrationURL, config.DBSource)
