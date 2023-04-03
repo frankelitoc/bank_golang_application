@@ -56,7 +56,6 @@ func main() {
 	//go runTaskProcessor(config, redisOpt, store)
 	go runGatewayServer(config, store, taskDistributor)
 	runGrpcServer(config, store, taskDistributor)
-	runGinServer(config, store)
 }
 
 func runDBMigration(migrationURL string, dbSource string) {
